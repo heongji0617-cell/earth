@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeStep – 생물다양성 보호 재단</title>
+
+    <style>
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            font-family: "Noto Sans KR", sans-serif;
+            color: #333;
+            background: #f7f9fc;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        section {
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* 부드러운 모던 톤 색상 */
+        .intro {
+            background: linear-gradient(135deg, #d5f7e6, #b3e5fc);
+        }
+
+        .activities {
+            background: #ffffff;
+        }
+
+        .campaign {
+            background: #eef9f2;
+        }
+
+        .news {
+            background: #ffffff;
+        }
+
+        .support {
+            background: #e8f0fe;
+        }
+
+        /* 헤더 */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.65);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            padding: 15px 5%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        header nav a:hover {
+            color: #0077cc;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 24px;
+        }
+
+        /* 블로그 스타일 카드 */
+        .card {
+            background: #fff;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 14px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            background: #222;
+            color: #eee;
+            font-size: 14px;
+        }
+
+        /* 버튼 */
+        .btn {
+            background: #0078ff;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            transition: 0.3s;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background: #005fcc;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 헤더 -->
+    <header>
+        <div class="logo">
+            <span>🐾</span> LifeStep
+        </div>
+        <nav>
+            <a href="#intro">소개</a>
+            <a href="#activities">핵심활동</a>
+            <a href="#campaign">캠페인참여</a>
+            <a href="#news">뉴스/스토리</a>
+            <a href="#support">후원/문의</a>
+        </nav>
+    </header>
+
+    <!-- 소개 -->
+    <section class="intro" id="intro">
+        <h1>라이프스텝 LifeStep</h1>
+        <p style="margin-top:20px; font-size:20px; max-width:600px;">
+            🐾 “한 걸음이 한 생명을 지킨다”  
+            <br><br>
+            라이프스텝은 지역의 생태계를 관찰하고, 멸종위기종 보호를 위해 청소년들이 직접 운영하는 비영리 재단입니다.  
+            우리가 기록한 작은 걸음들이 생물다양성을 지키는 큰 발자국이 됩니다.
+        </p>
+    </section>
+
+    <!-- 핵심 활동 -->
+    <section class="activities" id="activities">
+        <h2>📌 핵심 활동</h2>
+
+        <div class="card">
+            <h3>✅ 지역 멸종위기종 관찰 및 기록</h3>
+            <p>학생들이 직접 지역을 탐방하며 멸종위기종을 조사하고, 사진·지도·생태 데이터를 기록하여 보존 필요성을 알립니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>✅ 보호 서명 캠페인 운영</h3>
+            <p>온라인·오프라인 서명 캠페인을 통해 시민들에게 생물다양성과 보호의 중요성을 알립니다.</p>
+        </div>
+    </section>
+
+    <!-- 캠페인 참여 -->
+    <section class="campaign" id="campaign">
+        <h2>📣 캠페인 참여</h2>
+        <p style="margin-top:20px; max-width:600px;">
+            당신의 한 번의 서명이 지역 생태를 살릴 수 있습니다. 멸종위기종 목록과 보호 사유를 읽고 서명해주세요!
+        </p>
+
+        <button class="btn" onclick="joinCampaign()">캠페인 참여하기</button>
+    </section>
+
+    <!-- 뉴스 / 스토리 -->
+    <section class="news" id="news">
+        <h2>📰 뉴스 & 스토리</h2>
+
+        <div class="card">
+            <h3>📍 2025 지역 생물 조사 활동</h3>
+            <p>충렬여고 1학년 1반 학생들이 진행한 5월 생태 조사 활동 기록이 업로드되었습니다.</p>
+        </div>
+
+        <div class="card">
+            <h3>📍 보호가 필요한 종: 수달</h3>
+            <p>수달은 서식지 파괴로 인해 개체 수가 급격히 줄었으며, 보존을 위한 지역 캠페인이 시작되었습니다.</p>
+        </div>
+    </section>
+
+    <!-- 후원 / 문의 -->
+    <section class="support" id="support">
+        <h2>💬 후원 & 문의</h2>
+        <p style="margin-top:20px; max-width:600px;">
+            이메일: support@lifestep.org  
+            <br> 후원 참여와 단체 협력 문의는 언제든지 환영합니다!
+        </p>
+
+        <button class="btn" onclick="contact()">문의하기</button>
+    </section>
+
+    <!-- 푸터 -->
+    <footer>
+        © 2025 LifeStep — 이 홈페이지의 지적 소유권은 **충렬여고 1학년 1반**에게 있습니다.
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function joinCampaign() {
+            alert("캠페인에 참여해주셔서 감사합니다! 🐾");
+        }
+
+        function contact() {
+            alert("문의 접수 페이지는 제작 중입니다!");
+        }
+    </script>
+
+</body>
+</html>
